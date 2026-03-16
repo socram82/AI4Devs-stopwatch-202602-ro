@@ -1,0 +1,121 @@
+:root {
+    --bg-stopwatch: #f0fdf4; /* Verde muy claro */
+    --bg-countdown: #fef2f2; /* Rojo muy claro */
+    --color-up: #22c55e;
+    --color-down: #ef4444;
+    --text-main: #1f2937;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #e5e7eb;
+    transition: background-color 0.3s ease;
+}
+
+.timer-app {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.tab {
+    flex: 1;
+    padding: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #9ca3af;
+    transition: all 0.2s;
+}
+
+.tab.active {
+    color: var(--text-main);
+    border-bottom: 3px solid var(--text-main);
+}
+
+.icon.up { color: var(--color-up); font-size: 1.5rem; }
+.icon.down { color: var(--color-down); font-size: 1.5rem; }
+
+/* Display */
+.display-container {
+    position: relative;
+    display: inline-flex;
+    align-items: baseline;
+    margin: 2rem 0;
+    font-variant-numeric: tabular-nums;
+}
+
+.time-main {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1;
+}
+
+.time-ms {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #6b7280;
+    margin-left: 5px;
+}
+
+/* Countdown Inputs */
+.countdown-setup {
+    display: none; /* Oculto por defecto */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.countdown-setup.visible {
+    display: flex;
+}
+
+.countdown-setup input {
+    width: 60px;
+    padding: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+}
+
+/* Botones */
+.controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn {
+    padding: 10px 24px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.1s, opacity 0.2s;
+}
+
+.btn:active { transform: scale(0.95); }
+.btn-primary { background: #3b82f6; color: white; }
+.btn-secondary { background: #e5e7eb; color: #4b5563; }

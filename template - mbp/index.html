@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch & Countdown</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="timer-app">
+        <div class="tabs">
+            <button class="tab active" id="tab-stopwatch" data-mode="stopwatch">
+                <span class="icon up">⇧</span> Stopwatch
+            </button>
+            <button class="tab" id="tab-countdown" data-mode="countdown">
+                <span class="icon down">⇩</span> Countdown
+            </button>
+        </div>
+
+        <div class="countdown-setup" id="countdown-setup">
+            <input type="number" id="input-h" placeholder="HH" min="0" max="99">
+            <span>:</span>
+            <input type="number" id="input-m" placeholder="MM" min="0" max="59">
+            <span>:</span>
+            <input type="number" id="input-s" placeholder="SS" min="0" max="59">
+        </div>
+
+        <div class="display-container">
+            <div class="time-main" id="time-main">00:00:00</div>
+            <div class="time-ms" id="time-ms">.000</div>
+        </div>
+
+        <div class="controls">
+            <button class="btn btn-primary" id="btn-start">Iniciar</button>
+            <button class="btn btn-secondary" id="btn-clear">Limpiar</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
